@@ -39,7 +39,8 @@ package Controllers.Components
 			init();
 		}
 		
-		private var ary_Items:Array = new Array()
+		private var ary_Items:Array = new Array();
+		public var ary_Data:Array = new Array();
 		
 		public function init(trg_Ary:Array = null):void
 		{
@@ -56,9 +57,11 @@ package Controllers.Components
 		
 		public function change_Data(evt:Oev_FreeAddItem = null):void
 		{
-			var trg_Array:Array = throw_Item();
+			trace("Event Call : " + view.id);
 			
-			dispatchEvent(new Oev_FreeAddGroup(Oev_FreeAddGroup.CHANGE_DATA , trg_Array));
+			ary_Data = throw_Item();
+			
+			dispatchEvent(new Oev_FreeAddGroup(Oev_FreeAddGroup.CHANGE_DATA , ary_Data));
 		}
 		
 		public function throw_Item():Array

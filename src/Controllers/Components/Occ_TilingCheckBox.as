@@ -31,8 +31,6 @@ package Controllers.Components
 			
 			var test_Rows:Array = ["G","D","E","V","Hybrid"]
 			var test_Cols:Array = ["7","8"];
-			
-			init(test_Rows,test_Cols);
 		}
 		
 		private var ary_BaseData:Array = new Array();
