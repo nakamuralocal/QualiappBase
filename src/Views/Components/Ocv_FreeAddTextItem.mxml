@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:HGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx"
+		  xmlns:ComponentsController="Controllers.Components.*"
+		  width="100%" height="30" gap="5">
+	<fx:Declarations>
+		<!-- 非ビジュアルエレメント (サービス、値オブジェクトなど) をここに配置 -->
+		<ComponentsController:Occ_FreeAddTextItem id="viewCon"/>
+	</fx:Declarations>
+	<s:Label id="lab_Index" width="40" fontSize="20" height="100%" verticalAlign="middle" textAlign="right"/>
+	<s:TextInput id="txi_ItemText" width="70%" height="100%"/>
+	<s:Button id="btn_deleteThis" width="15%" height="100%" label="-" chromeColor="#FF3C00"
+			  fontSize="20"/>
+	<s:Button id="btn_addNext" width="15%" height="100%" label="+" chromeColor="#68F068"
+			  fontSize="20"/>
+	<s:Spacer width="2" height="100%"/>
+</s:HGroup>
