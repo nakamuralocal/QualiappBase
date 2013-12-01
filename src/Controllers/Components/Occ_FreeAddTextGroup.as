@@ -6,10 +6,7 @@ package Controllers.Components
 	import Views.Components.Ocv_FreeAddTextGroup;
 	import Views.Components.Ocv_FreeAddTextItem;
 	
-	import flash.events.Event;
-	import flash.events.EventDispatcher;
 	import flash.events.IEventDispatcher;
-	import flash.events.MouseEvent;
 	
 	import mx.controls.Spacer;
 	import mx.core.IMXMLObject;
@@ -36,13 +33,12 @@ package Controllers.Components
 		private function complete_CreationView(evt:FlexEvent):void
 		{
 			view.removeEventListener(FlexEvent.CREATION_COMPLETE , complete_CreationView);
-			init();
 		}
 		
 		private var ary_Items:Array = new Array();
 		public var ary_Data:Array = new Array();
 		
-		public function init(trg_Ary:Array = null):void
+		public function update(trg_Ary:Array = null):void
 		{
 			if(trg_Ary == null)
 			{
@@ -57,8 +53,6 @@ package Controllers.Components
 		
 		public function change_Data(evt:Oev_FreeAddItem = null):void
 		{
-			trace("Event Call : " + view.id);
-			
 			ary_Data = throw_Item();
 			
 			dispatchEvent(new Oev_FreeAddGroup(Oev_FreeAddGroup.CHANGE_DATA , ary_Data));

@@ -10,19 +10,19 @@ package Controllers.Components
 			super(target);
 		}
 		
-		public function add_BtnFuction():void
+		public function add_BtnFunction():void
 		{
 			
 		}
 		
-		public function remove_BtnFuction():void
+		public function remove_BtnFunction():void
 		{
 			
 		}
 		
 		public function exit_View():void
 		{
-			remove_BtnFuction();
+			remove_BtnFunction();
 		}
 	}
 }

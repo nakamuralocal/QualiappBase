@@ -4,7 +4,6 @@ package Controllers.Components
 	
 	import Views.Components.Ocv_FreeAddTextItem;
 	
-	import flash.events.EventDispatcher;
 	import flash.events.FocusEvent;
 	import flash.events.IEventDispatcher;
 	import flash.events.MouseEvent;
@@ -40,7 +39,7 @@ package Controllers.Components
 			
 			view.lab_Index.text = String(my_Index + 1);
 			
-			add_BtnFuction();
+			add_BtnFunction();
 		}
 		
 		public function return_Text():String
@@ -77,20 +76,21 @@ package Controllers.Components
 		{
 			if(my_Index == 0)
 			{
-				view.txi_ItemText.text = "";	
+				view.txi_ItemText.text = "";
+				throw_ChangeData(null);
 			} else {
 				dispatchEvent(new Oev_FreeAddItem(Oev_FreeAddItem.UNREG_ITEM,my_Index));
 			}
 		}
 		
-		public override function add_BtnFuction():void
+		public override function add_BtnFunction():void
 		{
 			view.txi_ItemText.addEventListener(FocusEvent.FOCUS_OUT,throw_ChangeData);
 			view.btn_addNext.addEventListener(MouseEvent.CLICK , click_btn_addNext);
 			view.btn_deleteThis.addEventListener(MouseEvent.CLICK , click_btn_deleteThis);
 		}
 
-		public override function remove_BtnFuction():void
+		public override function remove_BtnFunction():void
 		{
 			view.txi_ItemText.removeEventListener(FocusEvent.FOCUS_OUT,throw_ChangeData);
 			view.btn_addNext.removeEventListener(MouseEvent.CLICK , click_btn_addNext);
